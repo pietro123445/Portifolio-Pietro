@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  background-color: orange;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.exercicios {
+  background-color: white;
+  border: 2px solid orange;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 100px rgba(0, 0, 0, 0.1);
+}
+
+.atividade {
+  margin-bottom: 20px;
+  padding: 25px;
+  background-color: rgba(255, 166, 0, 0.652);
+  border-radius: 16px;
+  border: 1px solid orange;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ddd;
+  font-size: 14px;
+}
