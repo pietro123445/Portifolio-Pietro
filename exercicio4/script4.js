@@ -7,7 +7,7 @@ function media () {
 
     if(media >59) {
         let resultado = document.querySelector("#resultado");
-        resultado.innerHTML = `<p>Você ja esta na media</p>`
+        resultado.innerHTML = `<p><h2>Você ja esta na media</h2></p>`
     
 
     } else {
