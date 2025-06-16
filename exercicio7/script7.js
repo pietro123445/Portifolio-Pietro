@@ -1,24 +1,22 @@
-// Função que será chamada quando o usuário clicar no botão de Clique
+// variaveis globais para contagem
+let contadorCliques = 0;
+
 function clique() {
-    // Recupera o valor de cliques diretamente do elemento HTML
-    let inscritos = parseInt(document.getElementById('clique').textContent);
+    //incrementa o numero de cliques
+    contadorCliques++;
 
-    // Incrementa o número de cliques
-    inscritos++;
+    // atualiza a contagem de cliques na pagina
+    document.getElementById('cliques').textContent = contadorCliques;
 
-    // Atualiza o número de cliques na página
-    document.getElementById('Clique').textContent = clique;
-
-    // Calcula quantas equipes podem ser formadas (divisão dos inscritos por 3)
-    let equipes = Math.floor(inscritos / 3);
-
-    // Atualiza o número de equipes na página
-    document.getElementById('equipes').textContent = equipes;
-
-    // Verifica se já é possível formar o campeonato (mínimo de 4 equipes)
-    if (equipes >= 4) {
-        document.getElementById('alerta').style.display = 'block'; // Exibe o alerta
-    } else {
-        document.getElementById('alerta').style.display = 'none'; // Esconde o alerta
+    // verifica se ja completoou 10 cliques para exibir o emoji
+    if (contadorCliques % 10 ==0) {
+        document.getElementById('emoji').textContent = ' (◕‿◕) '; //exibe o emoji
     }
+}
+
+function zerarContagem() {
+    // reseta a contagem de cliques e atualiza a pagina
+    contadorCliques = 0;
+    document.getElementById('cliques').textContent = contadorCliques;
+    document.getElementById('emoji').textContent = ''; // Remove o emoji
 }
